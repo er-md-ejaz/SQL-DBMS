@@ -29,7 +29,7 @@
 
 
 
-CREATE DATABASE college;
+CREATE DATABASE IF NOT EXISTS college;
 USE college;
 
 CREATE TABLE student(
@@ -61,7 +61,7 @@ CREATE TABLE temp(
     FOREIGN KEY (temp_id) REFERENCES temp1(_id)
 );
 
-DROP TABLE student;
+DROP TABLE IF EXISTS student;
 
 INSERT INTO temp1 VALUES (10);
 INSERT INTO temp1 VALUES (10);
